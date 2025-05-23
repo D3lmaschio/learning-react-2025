@@ -1,0 +1,10 @@
+.wrapper {
+    max-width: 70rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+    display: grid;
+    grid-template-columns: 256px 1fr; /* 1fr -> unidade utilizada no grid para indicar que o elemento terá tamanho flexível */
+    gap: 2rem;
+    align-items: flex-start; /* o padrão é esticar os elementos para serem iguais, o flex-start alinha os elementos no começo */
+}
