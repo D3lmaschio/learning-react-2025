@@ -1,3 +1,24 @@
-.comment {
-  
+.commentBox {
+  display: flex;
+  margin-top: 2rem;
+  gap: 1rem;
 }
+
+.commentContent {
+  width: 100%;
+}
+
+.comment {
+  height: 6rem;
+  background-color: var(--gray-700);
+  border-radius: 9px;
+}
+
+.avatar {
+  box-sizing: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 8px;
+  /* border: 2px solid var(--gray-600); */
+}
+
