@@ -1,0 +1,23 @@
+flex = ?
+grid = ?
+display = ?
+box-model
+
+DISPLAY:
+
+display: block; - ocupa toda a largura disponível
+inline: ocupa apenas o espaço do conteúdo.
+inline-block: comporta-se como inline mas permite largura/altura
+none: oculta o elemento
+flex: ativa o flexbox
+grid: ativa o grid layout
+
+FLEXBOX: layout unidimensional (linha ou coluna)
+
+flex-direction - define a direção dos itens (row, column)
+justify-content - alinha no eixo principal
+align-items - alinha no eixo perpendicular
+gap - espaço entre os itens
+flex-wrap - quebra os itens para a próxima linha
+
+

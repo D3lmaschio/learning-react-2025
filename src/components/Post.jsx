@@ -1,4 +1,4 @@
-import { Comment } from './Component';
+import { Comment } from './Comment';
 import styles from './Post.module.css';
 
 export function Post() {
@@ -31,7 +31,11 @@ export function Post() {
         </footer>
       </form>
 
-      <Comment/>
+      <div className={styles.commentList}>
+        <Comment />
+        <Comment />
+        <Comment />
+      </div>
     </article>
   );
 }
