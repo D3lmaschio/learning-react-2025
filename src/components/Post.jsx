@@ -2,28 +2,31 @@ import { Avatar } from './Avatar';
 import { Comment } from './Comment';
 import styles from './Post.module.css';
 
-export function Post() {
+export function Post({ post }) {
   return (
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <Avatar src="https://github.com/D3lmaschio.png" />
+          <Avatar src={post.author.avatarUrl} />
           <div className={styles.authorInfo}>
-            <strong>D3lmaschio</strong>
-            <span>Fullstack Developer</span>
+            <strong>{post.author.name}</strong>
+            <span>{post.author.role}</span>
           </div>
         </div> 
 
-        <time title="26 de Maio às 15h53" dateTime="2025-05-26 15:50:00">Publicado há 1h</time>
+        <time title={'impl. tempo'} dateTime={post.publishedAt}>Publicado há {'impl. tempo'}</time>
       </header>
       <div className={styles.content}>
-        <p>Oi mãe</p>
-        <p>Olha o link <a href='#'>Link pra clicar</a></p>
+        {post.content.map(line => {
+          if (line.type === 'paragraph') 
+            return <p>{line.content}</p>
+          if (line.type === 'link')
+            return <a href={line.content}>{line.content}</a>
+        })}
       </div>
 
       <form className={styles.commentForm}>
         <strong>Comente</strong>
-
         <textarea
           placeholder='Bla bla bla...'
         />
