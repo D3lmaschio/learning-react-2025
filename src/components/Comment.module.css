@@ -23,7 +23,7 @@
 
 .commentContent header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -50,3 +50,6 @@
   border-radius: 2px;
 }
 
+.commentContent header button:hover {
+  color: var(--red-500);
+}
