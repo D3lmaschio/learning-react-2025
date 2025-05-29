@@ -8,3 +8,14 @@
     gap: 2rem;
     align-items: flex-start; /* o padrão é esticar os elementos para serem iguais, o flex-start alinha os elementos no começo */
 }
+
+@media (max-width: 768px) {
+
+    html {
+        font-size: 87.5%;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
