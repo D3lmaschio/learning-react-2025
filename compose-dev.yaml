@@ -1,0 +1,13 @@
+services:
+  app:
+    entrypoint:
+    - sleep
+    - infinity
+    image: node:latest
+    init: true
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    command: sh -c "npm install && npm run dev"
+    ports:
+      - 3000:3000
